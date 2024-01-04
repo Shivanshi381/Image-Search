@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,200&display=swap');
 * {
     margin:0;
     padding:0;
@@ -7,8 +7,33 @@
 
 
 }
+.background-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('https://images.unsplash.com/photo-1528460033278-a6ba57020470?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    filter: blur(5px); 
+    z-index: -1; /* Move the background behind other content */
+  }
+  .top-bar {
+    background-color: #167d9acb; 
+    color: #fff; 
+    padding: 10px; 
+    text-align: center; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Set z-index to a high value to ensure it's above other content */
+  }
+  
 body{
     line-height:1.6;
+    margin-top: 40px; /* Adjust margin to prevent content from being covered by the fixed top bar */
+    padding-top: 20px;
+    
 
 }
 h1{
@@ -39,7 +64,7 @@ form{
 }
 #search-button{
     padding:10px 20px;
-    background-color:#138069;
+    background-color:#167d9acb;
     color:#fff;
     border:none;
     font-size:18px;
@@ -49,6 +74,9 @@ form{
     margin-left:10px;
 
     
+}
+#search-button:hover{
+    opacity:0.8;
 }
 .search-results{
     display:flex;
@@ -88,7 +116,7 @@ form{
     text-transform:capitalize;
 }
 #show-more-button{
-    background-color:#138069;
+    background-color:#167d9acb;
     font-size:18px;
     border:none;
     color:#fff;
@@ -102,6 +130,9 @@ form{
     /* as we want this button to be there when we enter anything in search box 
      */
 
+}
+#show-more-button:hover{
+    opacity:0.8;
 }
 /* making app responsive acc to screen size 
  */
